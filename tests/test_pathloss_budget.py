@@ -20,7 +20,7 @@ def test_log_distance_n2_equals_free_space():
 
 
 def test_hata_urban_900mhz_1km_classic_value():
-    # 900 MHz, hb 30 m, hm 1.5 m, 1 km: A = 126.4 dB in the standard worked examples.
+    # 900 MHz, hb 30 m, hm 1.5 m, 1 km: A = 126.4 dB when the Hata equations are worked by hand.
     assert Hata(900, 30, 1.5, "urban").loss_db(1000) == pytest.approx(126.4, abs=0.1)
 
 
