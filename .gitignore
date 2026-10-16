@@ -1,0 +1,23 @@
+# secrets (none are needed; keep the pattern anyway)
+.env
+*.key
+*secrets*
+
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# streamlit
+.streamlit/secrets.toml
+
+# editors
+.vscode/
+.idea/
+*.swp

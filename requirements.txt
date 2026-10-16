@@ -1,0 +1,5 @@
+# core: standard library only. pandas and streamlit are for the web page (app.py).
+pandas>=2.2
+streamlit>=1.36
+pytest>=8
+ruff>=0.5
