@@ -39,9 +39,8 @@ one that still has the fade margin, which is what ADR does automatically.
 **How much do you trust a range of 2.2 km?**
 Not to better than a factor of two. Log-distance with n = 3 and Okumura-Hata "open" disagree
 by that much for the same budget, and Hata is being used below its fitted 30 m mast height.
-The models give the order of magnitude and show which inputs matter (every 3 dB of extra loss
-costs about 20 % of range at n = 3). A real gateway's RSSI log is what turns the estimate
-into a number; see the extension below.
+The models give the order of magnitude and show which inputs matter: every 3 dB of extra loss
+costs about 20 % of range at n = 3. A real RSSI log turns the estimate into a number.
 
 **Where does the sensitivity formula come from and why is NF a parameter?**
 Thermal noise is -174 dBm/Hz at 290 K; integrate over 125 kHz for +51 dB; add the receiver's
@@ -55,5 +54,5 @@ formula shows exactly where that difference enters.
 
 Add a `fit` command: give it a CSV of (distance, RSSI) from a real gateway and have it fit the
 log-distance exponent and a constant offset by least squares, then print the fitted n and the
-residual spread. It would turn the site-assumption warning into a measured value, and the
-residual standard deviation is a defensible fade margin.
+residual spread. That turns the site-assumption warning into a measurement, and the residual spread is a
+defensible fade margin.
