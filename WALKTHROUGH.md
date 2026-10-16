@@ -4,8 +4,8 @@
 
 This is a calculator, so every number must trace to one formula and one input. `LinkBudget`
 holds the radio path, a path-loss model object turns distance into dB and back, and
-`airtime()` is the datasheet formula typed out. The CLI and the Streamlit page call the same
-functions, so there is one implementation to test. The core has no dependencies.
+`airtime()` is the datasheet formula. The CLI and the Streamlit page call the same
+functions, so one implementation is tested.
 
 Each module's docstring says where its numbers come from: the SX1276 datasheet (airtime, SNR
 limits), the Hata 1980 equations, the LoRaWAN Regional Parameters. The battery profile is the
@@ -53,6 +53,6 @@ formula shows exactly where that difference enters.
 ## One thing to extend
 
 Add a `fit` command: give it a CSV of (distance, RSSI) from a real gateway and have it fit the
-log-distance exponent and a constant offset by least squares, then print the fitted n and the
-residual spread. That turns the site-assumption warning into a measurement, and the residual spread is a
-defensible fade margin.
+log-distance exponent and a constant offset by least squares, and print the fitted n and the
+residual spread. That turns the site-assumption warning into a measurement and the residual
+spread into a defensible fade margin.
